@@ -27,19 +27,21 @@ describe('Beatles Loops', function() {
 
   
   // since we define variable facts for this test, we don't need to put it in as an argument... it is not defined yet, so we don't include as an argument for johnLennonFacts function
-  
+
 function johnLennonFacts(facts) {   
   // don't need to provide the facts, but need to include it as an argument - which will then declare facts as a parameter
+   /* const facts = ["He was the last Beatle to learn to drive", "He was never a vegetarian", "He was a choir boy and boy scout", "He hated the sound of his own voice"];  */ 
   var extraFactsAboutJohn = [];
   var i = 0; 
   while (i < facts.length) {
     extraFactsAboutJohn.push(facts[i] + "!!!");
-    // extraFactsAboutJohn.push(${facts[i]}!!!);
+    // extraFactsAboutJohn.push(`${facts[i]}!!!`);
     // This interpolation could also work!! Nicole the Help lady suggested
     i++;
   }
   return extraFactsAboutJohn;
 }
+  
   
 /* TEST 2 
   describe('johnLennonFacts', function(){
@@ -63,7 +65,7 @@ function johnLennonFacts(facts) {
   function iLoveTheBeatles(n) {
     var numArray = [];
     do {
-      numArray.push("I love the Beatles!")
+      numArray.push("I love the Beatles!");
       n++;
     } while (n < 15);
     return numArray;
